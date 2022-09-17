@@ -17,7 +17,7 @@ public class GetQuote : MonoBehaviour
     public void NewQuote()
     {
         Quote q = APIHelper.GetNewQuote();
-        quoteText.SetText(q.quote + "\n\n - " + q.person);
+        quoteText.SetText("\"" + q.quote + "\"\n\n - " + q.person);
     }
 
 }
