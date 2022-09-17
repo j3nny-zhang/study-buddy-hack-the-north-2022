@@ -6,27 +6,44 @@ using TMPro;
 
 public class Timer : MonoBehaviour
 {
-    public static float timerCount = 5;
+    private static float timerSeconds = 60;
+    private static float timerMinutes = 1;
+
     TextMeshProUGUI timer;
 
     // Start is called before the first frame update
     void Start()
     {
         timer = GetComponent<TextMeshProUGUI>();
-        timer.SetText(timerCount.ToString());
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (timerCount <= 0)
+
+        timerSeconds -= Time.deltaTime;
+        int timerIntSeconds = (int)timerSeconds;
+        int timerIntMinutes = (int)timerMinutes;
+
+        if (timerMinutes < 0)
         {
-            timer.SetText("0");
-        } else
+            timer.SetText("0:00");
+
+            // switch scenes
+        }
+        else if (timerSeconds <= 0)
         {
-            timerCount -= Time.deltaTime;
-            int timerInt = (int)timerCount;
-            timer.SetText(timerInt.ToString());
+            timerMinutes -= 1;
+            timerSeconds = 60;
+        } 
+        else if (timerSeconds <= 10)
+        {
+            timer.SetText(timerIntMinutes.ToString() + ":0" + timerIntSeconds.ToString());
+        }
+        else
+        {
+            timer.SetText(timerIntMinutes.ToString() + ":" + timerIntSeconds.ToString());
         }
     }
+
 }

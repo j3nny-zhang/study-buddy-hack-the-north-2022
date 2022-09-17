@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class blobAI : MonoBehaviour
 {
-    private float moveSpeed = 1.0f;
+    private float moveSpeed = 0.5f;
 
     private bool isWandering = false;
     private bool isMoving = false;
@@ -41,7 +41,7 @@ public class blobAI : MonoBehaviour
 
     IEnumerator wander()
     {
-        int moveTime = Random.Range(1, 4);
+        int moveTime = Random.Range(1, 10);
         int moveWait = Random.Range(0, 1);
 
         isWandering = true;
