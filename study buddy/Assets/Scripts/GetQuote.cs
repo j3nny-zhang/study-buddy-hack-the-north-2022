@@ -19,7 +19,7 @@ public class GetQuote : MonoBehaviour
     {
         timerChange += Time.deltaTime;
 
-        if (timerChange >= 300.0f)
+        if (timerChange >= 60.0f)
         {
             NewQuote();
             timerChange = 0;
