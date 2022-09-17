@@ -6,8 +6,8 @@ using TMPro;
 
 public class Timer : MonoBehaviour
 {
-    private static float timerSeconds = 60;
-    private static float timerMinutes = 1;
+    private static float timerSeconds = 0;
+    public static float timerMinutes = 5;
 
     TextMeshProUGUI timer;
 

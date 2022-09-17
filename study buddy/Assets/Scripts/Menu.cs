@@ -5,9 +5,19 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
+
     public void StartTimer(string sceneName)
     {
-        Debug.Log("clicked");
         SceneManager.LoadScene(sceneName);
+    }
+
+    public void addTime()
+    {
+        Timer.timerMinutes += 5;
+    }
+
+    public void subtractTime()
+    {
+        Timer.timerMinutes -= 5;
     }
 }
