@@ -216,6 +216,7 @@ GameObject:
   - component: {fileID: 471774255}
   - component: {fileID: 471774254}
   - component: {fileID: 471774253}
+  - component: {fileID: 471774256}
   m_Layer: 3
   m_Name: Blob
   m_TagString: Player
@@ -235,7 +236,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba811b881189b8346829c5b2c679c159, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  art: {fileID: -6456346318501894404, guid: 9cd29dfad2ebbb94d8688dd0388143de, type: 3}
+  blobs:
+  - {fileID: -6456346318501894404, guid: 9cd29dfad2ebbb94d8688dd0388143de, type: 3}
+  - {fileID: -5800354613245106697, guid: 9cd29dfad2ebbb94d8688dd0388143de, type: 3}
+  - {fileID: 7143418262231227647, guid: 9cd29dfad2ebbb94d8688dd0388143de, type: 3}
+  - {fileID: 1865868528674038323, guid: 9cd29dfad2ebbb94d8688dd0388143de, type: 3}
+  - {fileID: -4941818727305674587, guid: 9cd29dfad2ebbb94d8688dd0388143de, type: 3}
+  - {fileID: 2505257060346966413, guid: 9cd29dfad2ebbb94d8688dd0388143de, type: 3}
 --- !u!212 &471774254
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -281,7 +288,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2, y: 2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
@@ -295,12 +302,38 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 471774252}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5, y: -3.3, z: -1.0511422}
+  m_LocalPosition: {x: 0.28, y: -3.98, z: -1.0511422}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &471774256
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 471774252}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.010602951, y: -0.07422018}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2, y: 2}
+    newSize: {x: 2, y: 2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.7422018, y: 1.7422018}
+  m_EdgeRadius: 0
 --- !u!1 &503166577
 GameObject:
   m_ObjectHideFlags: 0
