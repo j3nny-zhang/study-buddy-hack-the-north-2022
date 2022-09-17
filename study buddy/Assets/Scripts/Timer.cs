@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
@@ -30,6 +31,8 @@ public class Timer : MonoBehaviour
             timer.SetText("0:00");
 
             // switch scenes
+            timerMinutes = 5;
+            SceneManager.LoadScene("Start");
         }
         else if (timerSeconds <= 0)
         {
