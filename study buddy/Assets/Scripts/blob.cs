@@ -4,22 +4,25 @@ using UnityEngine;
 
 public class blob : MonoBehaviour
 {
-    public Sprite art;
+    public List<Sprite> blobs;
     SpriteRenderer blob_renderer;
+    private int index;
 
     // Start is called before the first frame update
     void Start()
     {
         blob_renderer = gameObject.GetComponent<SpriteRenderer>();
+        index = Random.Range(0, 6);
+        ChangeSprite();
     }
 
     // Update is called once per frame
     void Update()
     {
-        ChangeSprite();
+
     }
     void ChangeSprite()
     {
-        blob_renderer.sprite = art;
+        blob_renderer.sprite = blobs[index];
     }
 }
