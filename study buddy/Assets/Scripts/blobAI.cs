@@ -18,7 +18,6 @@ public class blobAI : MonoBehaviour
         if (isWandering == false)
         {
             StartCoroutine(wander());
-            Debug.Log(Screen.width);
         }
 
 
@@ -43,7 +42,7 @@ public class blobAI : MonoBehaviour
     IEnumerator wander()
     {
         int moveTime = Random.Range(1, 4);
-        int moveWait = Random.Range(0, 2);
+        int moveWait = Random.Range(0, 1);
 
         isWandering = true;
         yield return new WaitForSeconds(moveWait);
