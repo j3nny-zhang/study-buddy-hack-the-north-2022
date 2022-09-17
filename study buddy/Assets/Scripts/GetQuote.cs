@@ -7,11 +7,24 @@ public class GetQuote : MonoBehaviour
 {
 
     public TextMeshProUGUI quoteText;
+    public float timerChange = 0.0f;
 
     void Start()
     {
         quoteText = GetComponent<TextMeshProUGUI>();
         NewQuote();
+    }
+
+    void Update()
+    {
+        timerChange += Time.deltaTime;
+
+        if (timerChange >= 300.0f)
+        {
+            NewQuote();
+            timerChange = 0;
+        }
+
     }
 
     public void NewQuote()
