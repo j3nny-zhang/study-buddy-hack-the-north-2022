@@ -13,11 +13,17 @@ public class Menu : MonoBehaviour
 
     public void addTime()
     {
-        Timer.timerMinutes += 5;
+        if (Timer.timerMinutes < 55)
+        {
+            Timer.timerMinutes += 5;
+        }
     }
 
     public void subtractTime()
     {
-        Timer.timerMinutes -= 5;
+        if (Timer.timerMinutes > 5)
+        {
+            Timer.timerMinutes -= 5;
+        }
     }
 }
